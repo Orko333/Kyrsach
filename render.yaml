@@ -3,7 +3,7 @@ services:
     name: ai-interactive-fiction
     env: node
     plan: free
-    buildCommand: npm ci && npm run build:frontend
+    buildCommand: npm install && npm run build:frontend
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
