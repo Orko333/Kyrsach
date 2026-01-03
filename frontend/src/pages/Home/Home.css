@@ -1,0 +1,213 @@
+.home {
+  min-height: calc(100vh - 80px);
+}
+
+.hero {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--light);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background: rgba(99, 102, 241, 0.2);
+  transform: translateY(-3px);
+}
+
+.features {
+  /* Visual wrapper for the features section */
+  padding: 3.5rem 0;
+  margin-top: 2.5rem;
+}
+
+.features .container {
+  /* subtle card look around the whole features area */
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.35);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin: 1rem 0 2rem 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.feature-card {
+  background: linear-gradient(180deg, rgba(14,18,30,0.55), rgba(8,12,20,0.45));
+  border: 1px solid rgba(99, 102, 241, 0.06);
+  border-radius: 14px;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99, 102, 241, 0.22);
+  box-shadow: 0 18px 50px rgba(99, 102, 241, 0.12);
+}
+
+.feature-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgba(99,102,241,0.95), rgba(139,92,246,0.95));
+  color: #fff;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 28px rgba(99,102,241,0.12);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0.75rem 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+}
+
+.feature-card p {
+  color: rgba(241,245,249,0.85);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cta {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: var(--gradient);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.btn-cta {
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

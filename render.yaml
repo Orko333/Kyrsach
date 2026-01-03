@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: ai-interactive-fiction
+    env: node
+    plan: free
+    buildCommand: npm ci && npm run build:frontend
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: POLLINATIONS_API_KEY
+        sync: false

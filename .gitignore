@@ -1,0 +1,12 @@
+node_modules/
+.env
+.DS_Store
+dist/
+build/
+*.log
+.vscode/
+frontend/node_modules/
+frontend/build/
+generated_image_*.jpg
+*.jpg
+*.png
